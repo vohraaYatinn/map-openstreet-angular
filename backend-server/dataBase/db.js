@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 export const connectDB = () => {
-    mongoose.connect(process.env.MONGO_URI, {
+    mongoose.connect('mongodb+srv://root:root@cluster0.27sitra.mongodb.net/', {
         dbName: "geotracker",
     }).then((c) => {
         console.log("Database Connected", c.connection.host);
